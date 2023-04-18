@@ -1,0 +1,247 @@
+*{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 650px;
+    height: 415px;
+    border-radius: 5px;
+    /* 阴影 */
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    /* 相对定位 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.form-box{
+    /* 绝对定位 */
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    /*background-color: rgba(211, 183, 216, 1);*/
+    background-color: rgba(188,218,245,0.8);
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* 动画过渡 加速后减速 */
+    transition: 0.5s ease-in-out;
+}
+.register-box,.login-box{
+    /* 弹性布局 垂直排列 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.hidden{
+    display: none;
+    transition: 0.5s;
+}
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    /* 大写 */
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    /* 字间距 */
+    letter-spacing: 5px;
+}
+input{
+    background-color: transparent;
+    width: 70%;
+    color: rgb(255, 255, 255);
+    border: none;
+    /* 下边框样式 */
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding: 10px 0;
+    text-indent: 10px;
+    margin: 8px 2px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.captcha{
+    width: 70%;
+    color: rgb(255, 255, 255);
+    border: none;
+    /* 下边框样式 */
+}
+.captcha input{
+    align-self: flex-start;
+    width: 40%;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    margin: 0px 2px;
+}
+input::placeholder{
+    color: #fff;
+}
+input:focus{
+    color: rgba(33,132,222,0.8);
+    outline: none;
+    border-bottom: 1px solid rgba(33,132,222,0.8);
+    transition: 0.5s;
+}
+input:focus::placeholder{
+    opacity: 0;
+}
+.form-box button{
+    width: 70%;
+    margin-top: 35px;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 8px;
+    padding: 13px;
+    color: rgba(33,132,222,0.8);
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+.form-box button:hover{
+    background-color: rgba(33,132,222,0.8);
+    color: #f6f6f6;
+    transition: background-color 0.5s ease;
+}
+.captcha button{
+    display: inline-block;
+    background-color: #f6f6f6;
+    outline: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    margin-top:0px;
+    margin-bottom: 20px;
+    margin-left: 18px;
+    border: none;
+    cursor: pointer;
+    width:50%;
+    height: 80%;
+}
+.captchaSelected{
+    background-color: rgba(33,132,222,0.8)!important;
+    color: #f6f6f6!important;
+}
+.registerAnswer-box{
+    color: rgba(36,183,15,0.8);
+}
+.registerrefuse-box{
+    color:rgba(228,73,65,0.8)
+}
+.con-box{
+    width: 50%;
+    /* 弹性布局 垂直排列 居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 绝对定位 居中 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.con-box.left{
+    left: -2%;
+}
+.con-box.right{
+    right: -2%;
+}
+.con-box h2{
+    color: #deffe9;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.con-box p{
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #8e9aaf;
+    text-align: center;
+}
+.con-box span{
+    color: #d3b7d8;
+}
+.con-box img{
+    width: 150px;
+    height: 150px;
+    opacity: 0.9;
+    margin: 40px 0;
+}
+.con-box button{
+    margin-top: 3%;
+    background-color: #fff;
+    color: rgba(33,132,222,0.8);
+    border: 1px solid rgba(188,218,245,0.8);
+    padding: 6px 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+}
+.con-box button:hover{
+    background-color: rgba(188,218,245,0.8);
+    color: #fff;
+}
+.hidden2{
+    visibility: hidden;
+}
+.mask{
+    background-color:rgba(188,218,245,1);
+}
+
+.el-input{
+    position: static;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border: none;
+    /* 下边框样式 */
+    border:0;
+    padding:0;
+    margin: 0px 2px;
+    font-size: 14px;
+    --el-input-letter-spacing: 2px;
+    --el-input-bg-color: 0;
+    --el-input-border-color: transparent;
+    --el-input-hover-border-color: transparent;
+    --el-input-focus-border-color: transparent;
+    --el-input-placeholder-color: #fff;
+}
+
+:deep(.el-input__inner){
+    height: 38px;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-indent: 10px;
+}
+:deep(.el-input__inner:focus) {
+    color: rgba(33,132,222,0.8);
+    outline: none;
+    transition: 0.5s;
+    padding: 10px 0;
+}
+:deep(.el-input__wrapper) {
+    padding: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.el-form-item{
+    margin-bottom: 15px;
+    width: 100%;
+}
+:deep(.el-form-item.is-error .el-input__wrapper) {
+    border-bottom: 1px solid var(--el-color-danger);
+    box-shadow: none;
+}
+:deep(.el-input__wrapper.is-focus){
+    border-bottom: 1px solid rgba(33,132,222,0.8);
+}
+
